@@ -8,13 +8,13 @@ int main() {
     char Estado; //estado: A
     char CodigoCarta[30]; //codigo carta:A01
     char Cidade[30]; //cidade: Aracaju
-    int Populacao;//populacao:602.757
+    unsigned long int Populacao;//populacao:602.757
     float Areakm2;//area: 182,163
     float PIB;//pib: 16.447 bilhoes
     int PontosTuristicos; //pontos turisticos: 32
     float Densidadepopulacional; // Populacao/Areakm2
     float PIBpercapita; // PIB/Populacao
-    
+    float SuperPoder; //soma de todos os atributos numericos (1 / densidade populacional)
     
     //Solicita ao usuario que insira o nome do Estado da primeira carta
     printf("Estado: \n");
@@ -30,7 +30,7 @@ int main() {
 
     //Solicita ao usuario que insira a quantidade da população do local escolhido da primeira carta
     printf("População: \n");
-    scanf("%d", &Populacao);
+    scanf("%lu", &Populacao);
 
     //Solicita ao usuario que insira a area do local escolhido em km² da primeira carta
     printf("Area em km²: \n");
@@ -51,31 +51,37 @@ int main() {
     PIBpercapita = (PIB * 1000000000) / Populacao;
 
 
+    //Calculo Super Poder Carta 1
+
+    SuperPoder = (float) Populacao + Areakm2 + PIB + (float) PontosTuristicos + PIBpercapita + (1/Densidadepopulacional);
+   
+
     //Impressão da sinformações colocadas pelo usuario
     printf("*** Cadastro Carta 1 ***\n");
     printf("Estado Carta 1: %c\n", Estado);
     printf("Codigo da Carta 1: %s\n", CodigoCarta);
     printf("Nome da Cidade Carta 1: %s\n", Cidade);
-    printf("População Carta 1: %d\n", Populacao);
-    printf("Area em km² Carta 1: %f km²\n", Areakm2);
-    printf("PIB Carta 1: %.2f bilhões de reais\n", PIB);
+    printf("População Carta 1: %lu\n", Populacao);
+    printf("Area em km² Carta 1: %.2f km²\n", Areakm2);
+    printf("PIB Carta 1: %.3f bilhões de reais\n", PIB);
     printf("Pontos Turisticos Carta 1: %d\n", PontosTuristicos);
     printf("Densidade Populacional Carta 1: %.2f hab/km²\n", Densidadepopulacional);
     printf("PIB per capita Carta 1: %.2f reais\n", PIBpercapita);
-   
+    printf("O valor do Super Poder é: %f\n", SuperPoder);
 
+    //-------------------------------------------------------------
 
     // Cadastro Carta 2:
     char estado; //estado:B
     char codigoCarta[30]; //codigo carta:B01
     char cidade[30]; // cidade:Recife
-    int populacao; //população:1.488.920
+    unsigned long int populacao; //população:1.488.920
     float areakm2; //area:218,843
     float pib; // pib:54.970 milhões
     int pontosTuristicos; //pontos turisticos:50
     float densidadepopulacional; // populacao/areakm2
     float pibpercapita; // pib/populacao
-  
+    float superpoder; //soma de todos os atributos numericos (1 / densidade populacional)
     
     //Solicita ao usuario que insira o nome do Estado da segunda carta
     printf("Estado: \n");
@@ -91,7 +97,7 @@ int main() {
 
     //Solicita ao usuario que insira a quantidade da população do local escolhido da segunda carta
     printf("População: \n");
-    scanf("%d", &populacao);
+    scanf("%lu", &populacao);
 
     //Solicita ao usuario que insira a area do local escolhido em km² da segunda carta
     printf("Area em km²: \n");
@@ -112,22 +118,24 @@ int main() {
  
      //Operação aritmetica realizada para calcular o PIB per Capita da primeira carta
     
-    pibpercapita = (pib * 1000000000) / populacao;
+    pibpercapita = (pib * 1000000) / populacao;
 
+    //Calculo Super Poder Carta 1
 
+    superpoder = (float) populacao + areakm2 + pib +(float) pontosTuristicos + pibpercapita + (1/densidadepopulacional);
 
     //Solicita que o usuario coloque as informações necessarias da segunda carta
     printf("*** Cadastro Carta 2 ***\n");
     printf("Estado Carta 2: %c\n", estado);
     printf("Codigo da Carta 2: %s\n", codigoCarta);
     printf("Nome da Cidade Carta 2: %s\n", cidade);
-    printf("População Carta 2: %d\n", populacao);
-    printf("Area em km² Carta 2: %f km²\n", areakm2);
-    printf("PIB Carta 2: %.2f milhões de reais\n", pib);
+    printf("População Carta 2: %lu\n", populacao);
+    printf("Area em km² Carta 2: %.2f km²\n", areakm2);
+    printf("PIB Carta 2: %.3f milhões de reais\n", pib);
     printf("Pontos Turisticos Carta 2: %d\n", pontosTuristicos);
     printf("Densidade Populacional Carta 2: %.2f hab/km²\n", densidadepopulacional);
     printf("PIB per capita Carta 2: %.2f reais\n", pibpercapita);
-
+    printf("O valor do Super Poder é: %f\n", superpoder);
 
     return 0;
 }
