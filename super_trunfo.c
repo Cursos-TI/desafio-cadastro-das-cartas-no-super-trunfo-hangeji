@@ -153,19 +153,19 @@ int main() {
     printf("Comparação População: %d\n", Populacao > populacao);
 
     resultadoArea = Areakm2 > areakm2;
-    printf("Comparação Area em km²: %df\n", Areakm2 > areakm2);
+    printf("Comparação Area em km²: %d\n", Areakm2 > areakm2);
 
     resultadoPIB = PIB > pib;
-    printf("Comparação PIB: %df\n", PIB > pib);
+    printf("Comparação PIB: %d\n", PIB > pib);
 
     resultadoPontosTuristicos = PontosTuristicos > pontosTuristicos;
     printf("Comparação Pontos Turisticos: %d\n", PontosTuristicos > pontosTuristicos);
 
     resultadoresuDensidadePopulacional = Densidadepopulacional < densidadepopulacional;
-    printf("Comparação Densidade Populacional: %df\n", Densidadepopulacional < densidadepopulacional);
+    printf("Comparação Densidade Populacional: %d\n", Densidadepopulacional < densidadepopulacional);
 
     resultadoPIBperCapita = PIBpercapita > pibpercapita;
-    printf("Comparação PIB per Capiata: %df\n", PIBpercapita > pibpercapita);
+    printf("Comparação PIB per Capiata: %d\n", PIBpercapita > pibpercapita);
 
     resultadoSuperPoder = SuperPoder > superpoder;
     printf("Comparação Super Poderes: %d\n", SuperPoder > superpoder);
